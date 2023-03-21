@@ -1,0 +1,178 @@
+{
+  "script setup": {
+    "scope": "javascript,,typescript,vue",
+    "prefix": "ss",
+    "body": ["<script setup>", "$0", "</script>"],
+    "description": "script setup"
+  },
+  "script": {
+    "scope": "javascript,,typescript, vue",
+    "prefix": "sc",
+    "body": ["<script>", "$0", "</script>"],
+    "description": "script"
+  },
+  "style": {
+    "scope": "javascript,,typescript, vue",
+    "prefix": "st",
+    "body": ["<style>", "$0", "</style>"],
+    "description": "style"
+  },
+  "template": {
+    "scope": "javascript,,typescript, vue",
+    "prefix": "te",
+    "body": ["<template>", "  $0", "</template>"],
+    "description": "template"
+  },
+  "reactive": {
+    "scope": "javascript,,typescript",
+    "prefix": "rea",
+    "body": ["const $1 = reactive($2)", "$0"],
+    "description": "reactive()"
+  },
+  "ref": {
+    "scope": "javascript,,typescript",
+    "prefix": "re",
+    "body": ["const $1 = ref($2)", "$0"],
+    "description": "ref()"
+  },
+  "computed": {
+    "scope": "javascript,,typescript",
+    "prefix": "compu",
+    "body": ["const $0 = computed(() => {", "  return $1", "})"],
+    "description": "computed()"
+  },
+  "watch": {
+    "scope": "javascript,,typescript",
+    "prefix": "wat",
+    "body": [
+      "watch(${1:value}, (${2:oldValue}, ${3:newValue}) => {",
+      "  $0",
+      "})"
+    ],
+    "description": "watch()"
+  },
+  "onMounted": {
+    "scope": "javascript,,typescript",
+    "prefix": "onM",
+    "body": ["onMounted(() => {", "  $0", "})"],
+    "description": "onMounted()"
+  },
+  "onUpdated": {
+    "scope": "javascript,,typescript",
+    "prefix": "onUp",
+    "body": ["onUpdated(() => {", "  $0", "})"],
+    "description": "onUpdated()"
+  },
+  "onUnmounted": {
+    "scope": "javascript,,typescript",
+    "prefix": "onUnm",
+    "body": ["onUnmounted(() => {", "  $0", "})"],
+    "description": "onUnmounted()"
+  },
+  "onBeforeMount": {
+    "scope": "javascript,,typescript",
+    "prefix": "onBM",
+    "body": ["onBeforeMount(() => {", "  $0", "})"],
+    "description": "onBeforeMount()"
+  },
+  "onBeforeUpdate": {
+    "scope": "javascript,,typescript",
+    "prefix": "onBUp",
+    "body": ["onBeforeUpdate(() => {", "  $0", "})"],
+    "description": "onBeforeUpdate()"
+  },
+  "onBeforeUnmount": {
+    "scope": "javascript,,typescript",
+    "prefix": "onBUnm",
+    "body": ["onBeforeUnmount(() => {", "  $0", "})"],
+    "description": "onBeforeUnmount()"
+  },
+  "onErrorCaptured": {
+    "scope": "javascript,,typescript",
+    "prefix": "onErr",
+    "body": ["onErrorCaptured((error, vm, info) => {", "  $0", "})"],
+    "description": "onErrorCaptured()"
+  },
+  "onActivated": {
+    "scope": "javascript,,typescript",
+    "prefix": "onA",
+    "body": ["onActivated(() => {", "  $0", "})"],
+    "description": "onActivated()"
+  },
+  "onDeactivated": {
+    "scope": "javascript,,typescript",
+    "prefix": "onD",
+    "body": ["onDeactivated(() => {", "  $0", "})"],
+    "description": "onDeactivated()"
+  },
+  "v-for": {
+    "scope": "html",
+    "prefix": "vFor",
+    "body": [
+      "v-for=\"(${1:item}, ${2:index}) of ${3:arr}\" :key=\"${4:index}\""
+    ],
+    "description": "v-for"
+  },
+  "io-close": {
+    "scope": "javascript,typescript",
+    "prefix": "io",
+    "body": [
+      "const rl = require(\"readline\").createInterface({",
+      "  input: process.stdin,",
+      "  output: process.stdout,",
+      "});",
+      "",
+      "let inputArray = [];",
+      "rl.on(\"line\", (line) => {",
+      "  inputArray.push(line);",
+      "});",
+      "",
+      "rl.on(\"close\", () => {",
+      "  console.log(inputArray);",
+      "});"
+    ],
+    "description": "input-output"
+  },
+  "io-async": {
+    "scope": "javascript,typescript",
+    "prefix": "io-2",
+    "body": [
+      "const rl = require(\"readline\").createInterface({ input: process.stdin });",
+      "let iter = rl[Symbol.asyncIterator]();",
+      "const readline = async () => (await iter.next()).value;",
+      "",
+      "void (async function () {",
+      "  while ((line = await readline())) {",
+      "    console.log(line);",
+      "  }",
+      "})();"
+    ],
+    "description": "input-output-2"
+  },
+  "for-iterator": {
+    "scope": "javascript,typescript",
+    "prefix": "fori",
+    "body": [
+      "for (let ${1:index} = ${2:0}; ${1:index} < ${3:array}.length; ${1:index}++) {",
+      "  ${0}",
+      "}"
+    ],
+    "description": "for-iterator"
+  },
+  "for-reverse": {
+    "scope": "javascript,typescript",
+    "prefix": "forr",
+    "body": [
+      "for (let ${1:index} = ${2:array}.length - 1; ${1:index} >= 0; ${1:index}--) {",
+      "  ${0}",
+      "}"
+    ],
+    "description": "for-reverse"
+  },
+  "require": {
+    "scope": "javascript,typescript",
+    "prefix": "require",
+    "body": ["let { $0 } = require(\"$1\");"],
+    "description": "for-reverse"
+  }
+}
