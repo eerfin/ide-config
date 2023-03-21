@@ -13,9 +13,7 @@
 - Todo Tree
 - TypeScript Vue Plugin (Volar)
 - Vue Language Features (Volar)
-
-
-
+---
 - Typora
 - Snipaste
 - TortoiseGit
