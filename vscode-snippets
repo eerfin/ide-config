@@ -5,6 +5,12 @@
     "body": ["<script setup>", "$0", "</script>"],
     "description": "script setup"
   },
+  "script setup ts": {
+    "scope": "javascript,,typescript,vue",
+    "prefix": "sst",
+    "body": ["<script setup lang=\"ts\">", "$0", "</script>"],
+    "description": "script setup ts"
+  },
   "script": {
     "scope": "javascript,,typescript, vue",
     "prefix": "sc",
